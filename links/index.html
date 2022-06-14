@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>友链申请</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+	<meta content="telephone=no,email=no" name="format-detection">
+	<meta content="yes" name="apple-mobile-web-app-capable">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="apple-touch-fullscreen" content="yes">
+	<link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../src/style.css">
+    <link rel="stylesheet" href="../src/loader.css">
+    <!-- 图片 -->
+    <link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/lightgallery@2.1.8/css/lightgallery.css">
+    <!-- 弹窗 -->
+    <link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/izitoast@1.4.0/dist/css/iziToast.min.css">
+    <!-- 图标 -->
+    <link rel="stylesheet" href="https://fastly.jsdelivr.net/gh/volantis-x/cdn-fontawesome-pro@master/css/all.min.css">
+</head>
+
+<body>
+    <!-- 加载动画 -->
+    <div id='loader'>
+        <div class="outer_box">
+        <div class='loader_overlay'></div>
+        <div class='loader_cogs'>
+            <div class='loader_cogs__top'>
+                <div class='top_part'></div>
+                <div class='top_part'></div>
+                <div class='top_part'></div>
+                <div class='top_hole'></div>
+            </div>
+            <div class='loader_cogs__left'>
+                <div class='left_part'></div>
+                <div class='left_part'></div>
+                <div class='left_part'></div>
+                <div class='left_hole'></div>
+            </div>
+            <div class='loader_cogs__bottom'>
+                <div class='bottom_part'></div>
+                <div class='bottom_part'></div>
+                <div class='bottom_part'></div>
+                <div class='bottom_hole'></div>
+            </div>
+        </div>
+        </div>
+    </div>
+    <script>
+        setTimeout(() => {
+        $("#loader").hide();
+        $('body').css('overflow-y','scroll');
+        },1000);
+    </script>
+    <script src="https://upcdn.b0.upaiyun.com/libs/jquery/jquery-2.0.2.min.js"></script>
+    <!-- 标题内容 -->
+    <div class="idea">
+        <h2><i class='fad fa-subway fa-fw'></i><br>『友链接力』</h2>
+    </div>
+    <!-- 主题内容 -->
+    <div class="idea">
+        <div id="tcomment"></div><br>
+        <script src="https://fastly.jsdelivr.net/npm/lightgallery@2.1.8/lightgallery.min.js"></script>
+        <script src="https://lib.baomitu.com/twikoo/1.4.18/twikoo.all.min.js" crossorigin="anonymous" integrity="sha512-czTF7AsBQKM8Udh7f2kYxoEVO6MRUGoBACWgrnURTySkkV+wBwzOiFncA2fjR2JSOJ6vaTGILYIE1laKPH8fKA=="></script>
+        <script>
+        twikoo.init({
+        envId: 'https://comment-j98n6brr3-kaibazhidao66.vercel.app',
+        el: '#tcomment',
+        path: 'window.location.pathname',
+        lang: 'zh-CN',
+        onCommentLoaded: function () {
+            var commentContents = document.getElementsByClassName('tk-content');
+            for (var i = 0; i < commentContents.length; i++) {
+            var commentItem = commentContents[i];
+            var imgEls = commentItem.getElementsByTagName('img');
+            if (imgEls.length > 0) {
+            for (var j = 0; j < imgEls.length; j++) {
+                    var imgEl = imgEls[j];
+                    var aEl = document.createElement('a');
+                    aEl.setAttribute('class', 'tk-lg-link');
+                    aEl.setAttribute('href', imgEl.getAttribute('src'));
+                    aEl.setAttribute('data-src', imgEl.getAttribute('src'));
+                    aEl.appendChild(imgEl.cloneNode(false));
+                    imgEl.parentNode.insertBefore(aEl, imgEl.nextSibling);
+                    imgEl.remove();
+                    }
+                    lightGallery(commentItem, {
+                        selector: '.tk-lg-link',
+                        share: false
+                    });
+                    }
+                    }
+                }
+            });
+        </script>
+        <!-- JS -->
+	    <script src="../src/script.js"></script>
+        <!-- 弹窗插件 -->
+        <script src="https://fastly.jsdelivr.net/npm/izitoast@1.4.0/dist/js/iziToast.min.js"></script>
+        <!-- 点击特效 -->
+        <script src="https://fastly.jsdelivr.net/gh/kaibazhidao66/tcb/cdn/js/cool-love.js"></script>
+        <!-- 聊天社区 -->
+        <div class="gitter-button">
+            <div class="gitter-button-inner">
+                <svg viewBox="0 0 28 32"><path d="M28,32 C28,32 23.2863266,30.1450667 19.4727818,28.6592 L3.43749107,28.6592 C1.53921989,28.6592 0,27.0272 0,25.0144 L0,3.6448 C0,1.632 1.53921989,0 3.43749107,0 L24.5615088,0 C26.45978,0 27.9989999,1.632 27.9989999,3.6448 L27.9989999,22.0490667 L28,22.0490667 L28,32 Z M23.8614088,20.0181333 C23.5309223,19.6105242 22.9540812,19.5633836 22.5692242,19.9125333 C22.5392199,19.9392 19.5537934,22.5941333 13.9989999,22.5941333 C8.51321617,22.5941333 5.48178311,19.9584 5.4277754,19.9104 C5.04295119,19.5629428 4.46760991,19.6105095 4.13759108,20.0170667 C3.97913051,20.2124916 3.9004494,20.4673395 3.91904357,20.7249415 C3.93763774,20.9825435 4.05196575,21.2215447 4.23660523,21.3888 C4.37862552,21.5168 7.77411059,24.5386667 13.9989999,24.5386667 C20.2248893,24.5386667 23.6203743,21.5168 23.7623946,21.3888 C23.9467342,21.2215726 24.0608642,20.9827905 24.0794539,20.7254507 C24.0980436,20.4681109 24.0195551,20.2135019 23.8614088,20.0181333 Z"></path></svg>
+            </div>
+        </div>
+        <script>
+            ((window.gitter = {}).chat = {}).options = {
+            room: 'xkbj/blog',
+            activationElement: '.gitter-button'
+            };
+            window.onload = function () {
+            var s = document.createElement('script');
+            s.src = 'https://sidecar.gitter.im/dist/sidecar.v1.js';
+            document.body.appendChild(s);
+            };
+        </script>
+    </div>
+    <!-- 标注信息 -->
+    <div class="idea">
+        <footer>
+            <div class="power">
+                <span style="color: rgb(109, 208, 242); font-size: 15px">&#10084;</span>
+                <a href="https://blog.xukaiyyds.cn/bibi/" target="_blank">吐槽亿下</a>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

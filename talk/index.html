@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>XKの碎碎念</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+	<meta content="telephone=no,email=no" name="format-detection">
+	<meta content="yes" name="apple-mobile-web-app-capable">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="apple-touch-fullscreen" content="yes">
+	<meta name="keywords" content="XKの碎碎念">
+	<meta name="description" content="XK的闲言碎语，类似于QQ动态的说说。">
+	<link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../src/style.css">
+    <link rel="stylesheet" href="../src/loader.css">
+    <link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/izitoast@1.4.0/dist/css/iziToast.min.css">
+    <link rel="stylesheet" href="https://fastly.jsdelivr.net/gh/volantis-x/cdn-fontawesome-pro@master/css/all.min.css">
+</head>
+
+<body>
+    <!-- 加载动画 -->
+    <div id='loader'>
+        <div class="outer_box">
+        <div class='loader_overlay'></div>
+        <div class='loader_cogs'>
+            <div class='loader_cogs__top'>
+                <div class='top_part'></div>
+                <div class='top_part'></div>
+                <div class='top_part'></div>
+                <div class='top_hole'></div>
+            </div>
+            <div class='loader_cogs__left'>
+                <div class='left_part'></div>
+                <div class='left_part'></div>
+                <div class='left_part'></div>
+                <div class='left_hole'></div>
+            </div>
+            <div class='loader_cogs__bottom'>
+                <div class='bottom_part'></div>
+                <div class='bottom_part'></div>
+                <div class='bottom_part'></div>
+                <div class='bottom_hole'></div>
+            </div>
+        </div>
+        </div>
+    </div>
+    <script>
+        setTimeout(() => {
+        $("#loader").hide();
+        $('body').css('overflow-y','scroll');
+        },2000);
+    </script>
+    <script src="https://upcdn.b0.upaiyun.com/libs/jquery/jquery-2.0.2.min.js"></script>
+    <!-- 标题内容 -->
+    <div class="idea">
+        <h2><i class="fad fa-pen-square fa-fw"></i><br>『闲言碎语』</h2>
+    </div>
+    <!-- 主题内容 -->
+    <div class="idea">
+        <script src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-2ee6e51e-66e0-4a10-b6de-d41baad105a3/9f622d48-5989-4476-833d-3b5e2697c474.js"></script>
+        <!-- 存放说说的容器 -->
+        <div id="artitalk_main"></div>
+        <script>
+        new Artitalk({
+        appId: 'b6vBkixGns1G2who23O2hBsk-MdYXbMMI',
+        appKey: 'caIRmRo7GFdCit43o5fR8nrg',
+        color1: 'rgb(109, 208, 242)',
+        color2: 'rgb(245, 154, 190)',
+        color3: '#FFFFFF',
+        pageSize: '10',
+        atEmoji: {
+                jump: "https://fastly.jsdelivr.net/gh/forliuyifei/img@mater/img/2020-6/jump.gif",
+                eat:"https://fastly.jsdelivr.net/gh/forliuyifei/img@mater/img/2020-6/eat.gif",
+                run:"https://fastly.jsdelivr.net/gh/forliuyifei/img@mater/img/2020-6/run.gif",
+                lalala:"https://fastly.jsdelivr.net/gh/forliuyifei/img@mater/img/2020-6/lalala.gif",
+                sexy:"https://fastly.jsdelivr.net/gh/forliuyifei/img@mater/img/2020-6/sexy_rabbit.gif",
+                wawawa:"https://fastly.jsdelivr.net/gh/forliuyifei/img@mater/img/2020-6/wawawa.gif",
+                wolf:"https://fastly.jsdelivr.net/gh/forliuyifei/img@mater/img/2020-6/wolf.gif",
+            },
+        })
+        </script>
+        <!-- 底部歌词 -->
+        <link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
+        <meting-js theme="#767676" server="netease" type="playlist" id="5059661515" fixed="true" autoplay="false" order="list" loop="all"></meting-js>
+        <!-- JS -->
+	    <script src="../src/script.js"></script>
+        <!-- 音乐插件 -->
+        <script src="https://fastly.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
+        <script src="https://fastly.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js"></script>
+        <!-- 弹窗插件 -->
+        <script src="https://fastly.jsdelivr.net/npm/izitoast@1.4.0/dist/js/iziToast.min.js"></script>
+        <!-- 点击特效 -->
+        <script src="https://fastly.jsdelivr.net/gh/kaibazhidao66/tcb/cdn/js/cool-click.js"></script>
+        <!-- 即时通讯 -->
+        <script src="https://fastly.jsdelivr.net/gh/kaibazhidao66/tcb@master/cdn/js/daovoice.js"></script>
+    </div>
+    <!-- 版权信息 -->
+    <div class="idea">
+        <footer>
+            <div class="power">Copyright&nbsp;&copy;&nbsp;2020
+                <script>
+                    document.write(' - ' + (new Date()).getFullYear())
+                </script>
+                &nbsp;<a href="https://www.xukaiyyds.cn/memo">备忘小鹿</a>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

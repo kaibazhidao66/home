@@ -1,0 +1,135 @@
+/* 主题背景 */
+body {
+    cursor: url(https://fastly.jsdelivr.net/gh/kaibazhidao66/tcb/cur/a11.cur), auto;
+    background-image: url("https://fastly.jsdelivr.net/gh/kaibazhidao66/tcb/home/bg.png"), url("../img/background.png");
+    font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
+}
+
+/*定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸*/
+::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+    background-color: #F5F5F5;
+}
+
+/*定义滚动条轨道 内阴影+圆角*/
+::-webkit-scrollbar-track {
+    border-radius: 8px;
+    background-color: #F5F5F5;
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+/*定义滑块 内阴影+圆角*/
+::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    background-color: #44d7b6;
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, .1);
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .1);
+}
+
+/* 主体框架 */
+.idea {
+    max-width: 828px;
+    display: flex;
+    flex-direction: column;
+    margin: 1rem auto;
+    padding: 10px 5px;
+    background: #FFFFFF;
+    box-shadow: 0 3px 7px -1px rgba(0, 0, 0, 0.1);
+    line-height: 1.4;
+    border-radius: 5px;
+    overflow: hidden;
+    z-index: 99;
+}
+
+/* 聊天社区 */
+.gitter-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    -webkit-transform-origin: center;
+    transform-origin: center;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    overflow: hidden;
+    background: #388ffc;
+}
+.gitter-button svg {
+    width: 23px;
+    height: 27px;
+}
+.gitter-button svg path {
+    fill: rgb(255, 255, 255);
+}
+.gitter-button-inner {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+/* 杂七杂八 */
+a {
+    color: #808080;
+    text-decoration: none;
+}
+a:hover {
+    cursor: url(https://fastly.jsdelivr.net/gh/kaibazhidao66/tcb/cur/a22.cur), auto;
+}
+h2 {
+    color: #909399;
+    background-image: url(../img/header.png);
+    text-align: center;
+    letter-spacing: 10px;
+    padding: 15px;
+    margin: 0;
+}
+#grey {
+    color: #767676;
+}
+footer {
+    color: #808080;
+    text-align: center;
+}
+
+/* 隐藏评论图片 */
+.tk-input[data-v-619b4c52] .el-textarea__inner:focus {
+    background-image: none !important;
+}
+/* 隐藏评论信息 */
+.tk-footer {
+    display: none;
+}
+
+/* 底部歌词 */
+.aplayer .aplayer-lrc p
+{
+display:none;font-size:12px;font-weight:700;line-height:16px!important;
+}
+.aplayer .aplayer-lrc p.aplayer-lrc-current
+{
+display:none;font-size:15px;color:#909399;
+}
+.aplayer.aplayer-fixed.aplayer-narrow .aplayer-body
+{
+left:-66px!important;
+}
+.aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover
+{
+left:0!important;
+}
