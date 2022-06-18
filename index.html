@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <!-- 基础信息 -->
+    <meta charset="utf-8">
+    <title>XKの主页</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta http-equiv="Access-Control-Allow-Origin" content="*" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta name="force-rendering" content="webkit" />
+    <meta name="renderer" content="webkit" />
+    <meta name="description" content="xukai的个人主页界面,网站主要包含博客、音乐、相册、导航、碎碎念、留言板等诸多内容..." />
+    <meta name="keywords" content="XK,主页,XKの主页,xukaiyyds,xukaiyyds.cn" />
+    <meta name="author" content="XK,xukai" />
+    <!-- jQuery -->
+    <script src="https://lf9-cdn-tos.bytecdntp.com/cdn/expire-1-M/jquery/3.5.1/jquery.min.js"></script>
+    <!-- 引入样式 -->
+    <link rel="stylesheet" type="text/css" href="https://lf9-cdn-tos.bytecdntp.com/cdn/expire-1-M/bootstrap/5.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/main.css">
+    <link rel="stylesheet" type="text/css" href="./css/font.css">
+    <link rel="stylesheet" type="text/css" href="./css/mobile.css">
+    <link rel="stylesheet" type="text/css" href="./css/cursor.css">
+    <link rel="stylesheet" type="text/css" href="./css/lantern.css">
+    <link rel="stylesheet" type="text/css" href="./css/loading.css">
+    <link rel="stylesheet" type="text/css" href="./css/animation.css">
+    <!-- logo标志 -->
+    <link rel="icon shortcut" href="./favicon.ico">
+    <link rel="apple-touch-icon" href="./img/logo.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./img/icon/16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./img/icon/32.png">
+    <link rel="icon" type="image/png" sizes="180x180" href="./img/icon/180.png">
+    <!-- icon图标 -->
+    <link rel="stylesheet" href="https://fastly.jsdelivr.net/gh/volantis-x/cdn-fontawesome-pro@master/css/all.min.css">
+    <!-- Izitoast -->
+    <link rel="stylesheet" href="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/izitoast/1.4.0/css/iziToast.min.css">
+    <script type="text/javascript" src="https://lf26-cdn-tos.bytecdntp.com/cdn/expire-1-M/izitoast/1.4.0/js/iziToast.min.js"></script>
+    <!-- Aplayer -->
+    <link rel="stylesheet" href="https://lf9-cdn-tos.bytecdntp.com/cdn/expire-1-M/aplayer/1.10.1/APlayer.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/aplayer/1.10.1/APlayer.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- IE Out -->
+    <script>
+        if ( /*@cc_on!@*/ false || (!!window.MSInputMethodContext && !!document.documentMode)) window.location.href = "/upgrade-your-browser/index.html?referrer=" + encodeURIComponent(window.location.href);
+    </script>
+</head>
+
+<body>
+    <!--加载动画-->
+    <div id="loading-box">
+            <div class="loading-left-bg"></div>
+            <div class="loading-right-bg"></div>
+            <div class="spinner-box">
+                <div class="loader">
+                    <div class="sk-fading-circle">
+                        <div class="sk-circle1 sk-circle"></div>
+                        <div class="sk-circle2 sk-circle"></div>
+                        <div class="sk-circle3 sk-circle"></div>
+                        <div class="sk-circle4 sk-circle"></div>
+                        <div class="sk-circle5 sk-circle"></div>
+                        <div class="sk-circle6 sk-circle"></div>
+                        <div class="sk-circle7 sk-circle"></div>
+                        <div class="sk-circle8 sk-circle"></div>
+                        <div class="sk-circle9 sk-circle"></div>
+                        <div class="sk-circle10 sk-circle"></div>
+                        <div class="sk-circle11 sk-circle"></div>
+                        <div class="sk-circle12 sk-circle"></div>
+                    </div>
+                </div>
+                <div class="loading-word">
+                    <span id="loading-text">请稍候</span>
+                </div>
+            </div>
+    </div>
+    <!-- 粒子动画 -->
+    <canvas id="canvas">您的浏览器不支持 canvas，请更换浏览器！</canvas>
+    <!-- 页面框架 -->
+    <section id="section" class="section">
+        <main id="main" class="main">
+            <div class="container" id="container">
+                <div class="row" id="row">
+                    <div class="col left">
+                        <!--基本信息-->
+                        <div class="main-left">
+                            <!--Logo-->
+                            <div class="main-img">
+                                <img src="./img/logo.png" alt="logo">
+                                <div class="img-title">
+                                    <span class="img-title">yyds</span>
+                                    <span class="img-text">.cn</span>
+                                    <span class="img-smail">&nbsp;&nbsp;v&nbsp;1.6</span>
+                                    <a href="https://github.com/kaibazhidao66/home" target="_blank"><i class="iconfont icon-github1"></i></a>
+                                </div>
+                            </div>
+                            <!--介绍信息-->
+                            <div class="message cards" id="switchmore">
+                                <div class="des" id="des">
+                                    <i class="iconfont icon-yinhao-copy-copy"></i>
+                                    <div class="des-title">
+                                        <span id="change">Hello&nbsp;World&nbsp;!</span><br />
+                                        <span id="change1">一个建立于 21 世纪的小站，存活于互联网的边缘</span>
+                                    </div>
+                                    <i class="iconfont icon-yinhao-copy"></i>
+                                </div>
+                            </div>
+                            <!--社交链接-->
+                            <div class="social" id="social">
+                                <a href="https://gitter.im/yydshome/community" class="link" id="shequ" target="_blank">
+                                    <i class="iconfont icon-telegram1"></i>
+                                </a>
+                                <a href="http://chat.daovoice.io/?id=a554deee" class="link" id="sixin" target="_blank">
+                                    <i class="iconfont icon-telegram"></i>
+                                </a>
+                                <a href="http://sighttp.qq.com/authd?IDKEY=7b4e01af94ebb9aabf7dbdbac4ec930c24885299737fbd3e" class="link" id="qq" target="_blank">
+                                    <i class="iconfont icon-QQ"></i>
+                                </a>
+                                <a onclick="weixin()" class="link" id="weixin">
+                                    <i class="iconfont icon-weixin"></i>
+                                    <script>
+                                        function weixin() {
+                                            Swal.fire({
+                                                title: "My WeChat",
+                                                confirmButtonText: "关闭",
+                                                imageUrl: "./img/wechat.jpg",
+                                                imageWidth: 190,
+                                                imageHeight: 190,
+                                            })
+                                        }
+                                    </script>
+                                </a>
+                                <a href="mailto:3353212714@qq.com" class="link" id="email">
+                                    <i class="iconfont icon-email"></i>
+                                </a>
+                                <a id="link-text">通过这里联系我</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!--第二屏-->
+                    <div id="changemore" class="logo logo-card cards" style="display: none">
+                        <div style="float: left;"><i class="iconfont icon-yinhao-copy-copy" style="font-size: 10px;"></i></div>
+                        <a class="logo-text">
+                            <span id="subtitle"></span>
+                            <script src="https://cdn.staticfile.org/typed.js/2.0.12/typed.min.js"></script>
+                        </a>
+                        <div style="float: right;"><i class="iconfont icon-yinhao-copy" style="font-size: 10px;"></i></div>
+                    </div>
+                    <div class="col right">
+                        <div class="main-right">
+                            <!--功能区-->
+                            <div class="row rightone" id="rightone">
+                                <div class="col hitokotos">
+                                    <!--一言-->
+                                    <div class="hitokoto cards" id="hitokoto">
+                                        <!--切换音乐-->
+                                        <div class="open-music fixed-top" id="open-music">
+                                            <i class="iconfont icon-music"></i>
+                                            <span>&nbsp;打开音乐播放器</span>
+                                        </div>
+                                        <!--切换音乐结束-->
+                                        <div class="hitokoto-all">
+                                            <div class="hitokoto-text"><span id="hitokoto_text">每一个不曾起舞的日子都是对生命的辜负!</span>
+                                            </div>
+                                            <div class="hitokoto-from">-「&nbsp;<span id="from_text">xukai</span>&nbsp;」
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--音乐-->
+                                    <div class="music cards" id="music">
+                                        <div class="music-all">
+                                            <div class="music-button">
+                                                <div id="music-open">音乐列表</div>
+                                                <div id="music-close">回到一言</div>
+                                            </div>
+                                            <div class="music-control">
+                                                <i class="iconfont icon-next-one-copy" id="last"></i>
+                                                <div id="play">
+                                                    <i class="iconfont icon-play"></i>
+                                                </div>
+                                                <i class="iconfont icon-next-one" id="next"></i>
+                                            </div>
+                                            <div class="music-menu">
+                                                <div class="music-text">
+                                                    <span id="music-name">未播放音乐</span>
+                                                </div>
+                                                <div class="music-volume" style="display: none;">
+                                                    <div id="volume-ico">
+                                                        <i class="iconfont icon-volume-1"></i>
+                                                    </div>
+                                                    <input type="range" min="0" max="1" step="0.01" id="volume"
+                                                        oninput="changevolume()">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col times">
+                                    <!--时间-->
+                                    <div class="time cards">
+                                        <div class="timeshow" id="time">
+                                            2000&nbsp;年&nbsp;0&nbsp;月&nbsp;00&nbsp;日&nbsp;<span
+                                                class="weekday">星期一</span><br><span class="time-text">00:00:00</span>
+                                        </div>
+                                        <div class="weather">
+                                            <span id="city_text">天气</span>&nbsp;<span
+                                                id="wea_text">加载失败</span>&nbsp;<span id="tem_night">*</span>°C~<span
+                                                id="tem_day">*</span>°C&nbsp;<span id="win_text">风向</span><span
+                                                id="win_speed">*</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--分隔线-->
+                            <div class="line">
+                                <i class="iconfont icon-link"></i>
+                                <span class="line-text">网站列表</span>
+                            </div>
+                            <!--网站链接-->
+                            <div class="link">
+                                <!--第一组-->
+                                <div class="row">
+                                    <div class="col">
+                                        <a href="https://blog.xukaiyyds.cn/" target="_blank">
+                                            <div class="link-card cards">
+                                                <i class="iconfont icon-blog-solid"></i>
+                                                <span class="link-name">博客</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col 2">
+                                        <a href="https://music.xukaiyyds.cn/" target="_blank">
+                                            <div class="link-card cards">
+                                                <i class="iconfont icon-music-list"></i>
+                                                <span class="link-name">音乐</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col">
+                                        <a href="https://photo.xukaiyyds.cn/" target="_blank">
+                                            <div class="link-card cards">
+                                                <i class="iconfont icon-photo"></i>
+                                                <span class="link-name">相册</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <!--第二组-->
+                                <div class="row" style="margin-top: 1.5rem;">
+                                    <div class="col">
+                                        <a href="https://nav.xukaiyyds.cn/" target="_blank">
+                                            <div class="link-card cards">
+                                                <i class="iconfont icon-navigation"></i>
+                                                <span class="link-name">自定义</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col 2">
+                                        <a href="https://www.xukaiyyds.cn/talk" target="_blank">
+                                            <div class="link-card cards">
+                                                <i class="iconfont icon-cloud"></i>
+                                                <span class="link-name">碎碎念</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col">
+                                        <a href="https://www.xukaiyyds.cn/comment" target="_blank">
+                                            <div class="link-card cards">
+                                                <i class="iconfont icon-comment-alt-lines"></i>
+                                                <span class="link-name">留言板</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--展开菜单按钮-->
+                <div class="menu" id="switchmenu">
+                    <a class="munu-button cards" id="menu"><i class="iconfont icon-bars"></i></a>
+                </div>
+                <!--更多内容-->
+                <div class="more" id="more">
+                    <!--关闭按钮-->
+                    <div class="close fixed-top" id="close">
+                        <i class="iconfont icon-close"></i>
+                    </div>
+                    <div class="line" style="margin-top: 1rem;">
+                        <i class="iconfont icon-right-copy"></i>
+                        <span class="line-text">时间胶囊</span>
+                        <i class="iconfont icon-right"></i>
+                    </div>
+                    <div class="date" id="date">
+                        <div class="item" id="dayProgress">
+                            <div class="date-text" style="margin-top: 0rem;">今日已经度过了&nbsp;<span></span>&nbsp;小时</div>
+                            <div class="progress">
+                                <div class="progress-bar"></div>
+                            </div>
+                        </div>
+                        <div class="item" id="weekProgress">
+                            <div class="date-text">本周已经度过了&nbsp;<span></span>&nbsp;天</div>
+                            <div class="progress">
+                                <div class="progress-bar"></div>
+                            </div>
+                        </div>
+                        <div class="item" id="monthProgress">
+                            <div class="date-text">本月已经度过了&nbsp;<span></span>&nbsp;天</div>
+                            <div class="progress">
+                                <div class="progress-bar"></div>
+                            </div>
+                        </div>
+                        <div class="item" id="yearProgress">
+                            <div class="date-text">今年已经度过了&nbsp;<span></span>&nbsp;个月</div>
+                            <div class="progress">
+                                <div class="progress-bar"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="line">
+                        <i class="iconfont icon-right-copy"></i>
+                        <span class="line-text">友情链接</span>
+                        <i class="iconfont icon-right"></i>
+                    </div>
+                    <!--网站链接-->
+                    <div class="row">
+                        <div class="col">
+                            <a href="https://cloud.tencent.com/" target="_blank">
+                                <div class="link-card cards">
+                                    <span class="link-name">腾讯云</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col 2">
+                            <a href="https://cn.aliyun.com/" target="_blank">
+                                <div class="link-card cards">
+                                    <span class="link-name">阿里云</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col">
+                            <a href="https://www.huaweicloud.com/" target="_blank">
+                                <div class="link-card cards">
+                                    <span class="link-name">华为云</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="row" style="margin-top: 1.5rem;">
+                        <div class="col">
+                            <a href="https://www.dogecloud.com/" target="_blank">
+                                <div class="link-card cards">
+                                    <span class="link-name">多吉云</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col 2">
+                            <a href="https://unicloud.dcloud.net.cn/" target="_blank">
+                                <div class="link-card cards">
+                                    <span class="link-name">存储云</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col">
+                            <a id="openmore">
+                                <div class="link-card cards">
+                                    <span class="link-name">网抑云</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!--更多页面-->
+                <div class="box" id="box" style="display: none">
+                    <div class="box-wrapper">
+                        <!--关闭按钮-->
+                        <div class="closebox fixed-top" id="closemore">
+                            <i class="iconfont icon-close"></i>
+                        </div>
+                        <!--音乐歌单-->
+                        <div class="box-music">
+                            <div id="aplayer"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <!-- 欢迎弹窗 -->
+        <script src="https://fastly.jsdelivr.net/npm/sweetalert"></script>
+        <script>
+        swal({
+            title: '花径不曾缘客扫，蓬门今始为君开。',
+            text: "Hi，在下是博主 xukai ，这里是我个人学习生活的小窝。\n 在这里你可以看博文，听音乐，交朋友。\n 欢迎留言，交换友链。\n\n -但请不要留下不友好的痕迹，不然在下隔着屏幕咬你啊\n本站永久访问顶级域名：www.xukaiyyds.cn，建议收藏",
+            icon: 'https://pic.imgdb.cn/item/6279e4a9094754312967c8b0.png',
+            button: "好的",
+        });
+        </script>
+        <!-- 底部动画 -->
+        <div class="field">
+            <div class="item1 shake"></div>
+            <div class="item2 shake"></div>
+            <div class="item3 shake"></div>
+            <div class="item1 shake"></div>
+            <div class="item2 shake"></div>
+            <div class="item3 shake"></div>
+            <div class="item1 shake"></div>
+            <div class="item2 shake"></div>
+            <div class="item3 shake"></div>
+            <div class="item1 shake"></div>
+            <div class="item2 shake"></div>
+            <div class="item3 shake"></div>
+        </div>
+        <!-- 版权信息 -->
+        <footer id="footer" class="fixed-bottom footer">
+            <div class="power">Copyright&nbsp;&copy;&nbsp;2020
+                <script>
+                    document.write(' - ' + (new Date()).getFullYear())
+                </script>
+                <a href="https://www.xukaiyyds.cn/">主页</a>&nbsp;&
+                <a href="https://blog.xukaiyyds.cn/about" target="_blank">关于我</a>
+                <a href="https://web.xukaiyyds.cn/" target="_blank">站点检测</a>
+            </div>
+            <!-- 歌词显示 -->
+            <div id="lrc"></div>
+        </footer>
+    </section>
+    <!-- noscript -->
+    <noscript>
+        <div class="noscript fixed-top">请开启 JavaScript</div>
+    </noscript>
+    <!-- baidu.com -->
+    <script type="text/javascript">
+        //自动推送
+        (function(){
+            var bp = document.createElement('script');
+            var curProtocol = window.location.protocol.split(':')[0];
+            if (curProtocol === 'https') {
+                bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+            }
+            else {
+                bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+            }
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(bp, s);
+        })();
+        //统计人数
+        var _hmt = _hmt || [];
+        (function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?6b60d77cf1ed8a47924093a14dc1d23c";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+    <!-- JS -->
+    <script type="text/javascript" src="./js/main.js"></script>
+    <script type="text/javascript" src="./js/time.js"></script>
+    <script type="text/javascript" src="./js/cursor.js"></script>
+    <script type="text/javascript" src="./js/particle.js"></script>
+    <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/sweetalert2@10.15.5/dist/sweetalert2.all.min.js"></script> <!--微信弹窗-->
+    <script type="text/javascript" src="https://lf9-cdn-tos.bytecdntp.com/cdn/expire-1-M/bootstrap/5.1.0/js/bootstrap.min.js">
+    </script>
+</body>
+
+</html>
