@@ -312,8 +312,8 @@
 .menus .logo {
     display: inline !important;
     text-align: center;
-    position: fixed;
-    top: 3%;
+    position: absolute;
+    top: 10%;
 }
 
 /*终端文字*/
@@ -324,7 +324,7 @@
 
 .logo-card {
     max-width: 340px;
-    border-radius: 20px;
+    border-radius: 30px;
     padding: 1rem;
     cursor: pointer;
     display: flex;
